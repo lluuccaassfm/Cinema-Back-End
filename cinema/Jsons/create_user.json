@@ -1,0 +1,16 @@
+{
+  "email"     : "user@email.com",
+  "pass"      : "hasd154487",
+  "name"      : "user name",
+  "sex"       : "male",
+  "birthDate" : "04/07/1990",
+  "address"   :   {
+
+    "logradouro"  : "block 456",
+    "number"      : 10,
+    "complement"  : "house green",
+    "city"        : "Brasília",
+    "state"       : "DF"
+  }
+
+}

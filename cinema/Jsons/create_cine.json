@@ -1,0 +1,63 @@
+{
+  "name"  :   "CineFanatic",
+  "address"   :   {
+
+    "logradouro"  : "quadra 456",
+    "number"      : 10,
+    "complement"  : "casa 7",
+    "city"        : "Brasília",
+    "state"       : "DF"
+
+  },
+  "sessions" : [{
+    "movie"  : {
+      "name"           : "Movie 1",
+      "classification" : 12,
+      "genre"          : "action",
+      "duration"       : 116,
+      "description"    : "Movie based on the real facts of the 1998",
+      "situation"      : "em cartaz",
+      "type"           : "dubbed"
+    },
+    "room"  :   {
+      "number":     5,
+      "type":       "3D",
+      "capacity":   100
+    },
+    "date"  :   "16/06/2019",
+    "duration"  : 1322
+  }],
+  "rooms"  : [{
+      "number":     1,
+      "type":       "3D",
+      "capacity":   100
+    },
+    {
+      "number":     2,
+      "type":       "2D",
+      "capacity":   80
+    },
+    {
+      "number":     3,
+      "type":       "3D/XD",
+      "capacity":   150
+    }],
+  "movies"  :[{
+    "name"           : "Movie 1",
+    "classification" : 12,
+    "genre"          : "action",
+    "duration"       : 116,
+    "description"    : "Movie based on the real facts of the 1998",
+    "situation"      : "em cartaz",
+    "type"           : "subtitled"
+    },
+    {
+      "name"           : "Movie 2",
+      "classification" : 10,
+      "genre"          : "adventure",
+      "duration"       : 150,
+      "description"    : "Movie oscar",
+      "situation"      : "em breve",
+      "type"           : "subtitled"
+    }]
+}

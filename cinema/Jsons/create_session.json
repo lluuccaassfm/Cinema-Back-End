@@ -1,0 +1,18 @@
+{
+  "movie"  : {
+    "name"           : "Movie 1",
+    "classification" : 12,
+    "genre"          : "action",
+    "duration"       : 116,
+    "description"    : "Movie based on the real facts of the 1998",
+    "situation"      : "em cartaz",
+    "type"           : "dubbed"
+  },
+  "room"  :   {
+    "number":     5,
+    "type":       "3D",
+    "capacity":   100
+  },
+  "date"  :   "16/06/2019",
+  "duration"  : 1322
+}

@@ -1,0 +1,103 @@
+-Collection User:
+	Insert 		
+		Request: POST-User(json)-Header(json); 
+		Response: {message: insert sucess} 
+	Update 		
+		Request: PUT-UserUpdate(json)-Header(json)-Querie: id; 
+		Response: {message: update sucess} 
+	Update_pass_email		
+		Request: PUT-UserUpdateSpecific(json)-Header(json)-Querie: id; 
+		Response: {message: update sucess} 
+	Delete		
+		Request: DELETE-ID(objectID)-Querie: id; 
+		Response: {message: delete sucess} 
+	GetID
+		Request: GET-ID(objectID)-Querie: id;
+		Response: user(json)
+	GetAll
+		Request: GET - ...
+		Response: []user(json) 	
+
+-Collection movie:
+	Insert 		
+		Request: POST-Movie(json)-Header(json); 
+		Response: {message: insert sucess} 
+	Update 		
+		Request: PUT-MovieUpdate(json)-Header(json)-Querie: id; 
+		Response: {message: update sucess} 
+	Delete		
+		Request: DELETE-ID(objectID)-Querie: id; 
+		Response: {message: delete sucess} 
+	GetID
+		Request: GET-ID(objectID)-Querie: id;
+		Response: movie(json)
+	GetAll
+		Request: GET - ...
+		Response: []movie(json) 	
+
+-Collection room:
+	Insert 		
+		Request: POST-Room(json)-Header(json); 
+		Response: {message: insert sucess} 
+	Update 		
+		Request: PUT-RoomUpdate(json)-Header(json)-Querie: id; 
+		Response: {message: update sucess} 
+	Delete		
+		Request: DELETE-ID(objectID)-Querie: id; 
+		Response: {message: delete sucess} 
+	GetID
+		Request: GET-ID(objectID)-Querie: id;
+		Response: room(json)
+	GetAll
+		Request: GET - ...
+		Response: []room(json) 
+
+-Collection session:
+	Insert 		
+		Request: POST-Session(json)-Header(json); 
+		Response: {message: insert sucess} 
+	Update 		
+		Request: PUT-SessionUpdate(json)-Header(json)-Querie: id; 
+		Response: {message: update sucess} 
+	Delete		
+		Request: DELETE-ID(objectID)-Querie: id; 
+		Response: {message: delete sucess} 
+	GetID
+		Request: GET-ID(objectID)-Querie: id;
+		Response: sessionView(json)
+	GetAll
+		Request: GET - ...
+		Response: []sessionView(json) 
+
+-Collection cine:
+	Insert 		
+		Request: POST-Cine(json)-Header(json); 
+		Response: {message: insert sucess} 
+	Update 		
+		Request: PUT-CineUpdate(json)-Header(json)-Querie: id; 
+		Response: {message: update sucess} 
+	Delete		
+		Request: DELETE-ID(objectID)-Querie: id; 
+		Response: {message: delete sucess} 
+	GetID
+		Request: GET-ID(objectID)-Querie: id;
+		Response: CineViewInCollection(json)
+	GetAll
+		Request: GET - ...
+		Response: []CineViewInCollection(json) 
+
+-Collection reservation:
+	Insert 		
+		Request: POST-reservation(json)-Header(json); 
+		Response: {message: insert sucess} 
+	Delete		
+		Request: DELETE-ID(objectID)-Querie: id; 
+		Response: {message: delete sucess} 
+	GetID
+		Request: GET-ID(objectID)-Querie: id;
+		Response: ReservationViewInCollection(json)
+	GetAll
+		Request: GET - ...
+		Response: []ReservationViewInCollection(json) 
+
+	

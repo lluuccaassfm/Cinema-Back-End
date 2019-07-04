@@ -1,0 +1,39 @@
+O que falta:
+
+- Colocar os 'Validations' na documentação
+- Verificar os 'Ids' da request com os salvos no banco
+- Testar todas as requests
+- Preencher com pelo menos um dado em cada collection no BD	 
+
+________________________________________
+//Erros
+
+- err 400 ('Invalid json') 
+	json invalid
+
+- err 405 ('Type body not allowed')
+
+	Type body not allowed
+
+- err 405 ('No id')
+
+- err 412 ('Validation failed')
+
+- err 412 ('Invalid id')
+
+- err 500 ('Movie not found')
+
+________________________________________
+
+//message of id
+
+identify the session with that address
+
+________________________________________
+
+- User 
+- Movie
+- Room
+- Session
+- Cine
+- Reservation

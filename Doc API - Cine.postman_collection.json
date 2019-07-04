@@ -1,0 +1,2486 @@
+{
+	"info": {
+		"_postman_id": "34eae75c-e8d7-4b9f-955b-a63405551c97",
+		"name": "Doc API - Cine",
+		"description": "# Introduction\nDocumentation that aims at the correct use of the API.\n\n# Overview\nThis documentation displays all possible requests and responses within the API.\n\n# Authentication\nYou do not need to use authentication to make requests to this API.\n\n# Error Codes\n** 400 – Bad Request **\nData sent incorrectly or non-standard\n\n** 405 - Method Not Allowed **\nSome request parameters have not been entered\n\n** 500 - Internal Server Error **\nError between server and database",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\"     : \"newEmail@email.com\",\n\t\"pass\"      : \"12345user\"\n  }"
+						},
+						"url": {
+							"raw": "localhost:8080/login/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login",
+								""
+							]
+						},
+						"description": "Verify login user"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\"     : \"newEmail@email.com\",\n\t\"pass\"      : \"12345user\"\n  }"
+								},
+								"url": {
+									"raw": "localhost:8080/login/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:53:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"login success\"}"
+						}
+					]
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\"     : \"user@email.com\",\n  \"pass\"      : \"hasd154487\",\n  \"name\"      : \"user name\",\n  \"sex\"       : \"male\",\n  \"birthDate\" : \"04/07/1990\",\n  \"address\"   :   {\n\n    \"logradouro\"  : \"block 456\",\n    \"number\"      : 10,\n    \"complement\"  : \"house green\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n  }\n\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						},
+						"description": "Register a new user on the system"
+					},
+					"response": [
+						{
+							"name": "Create user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\"     : \"user@email.com\",\n  \"pass\"      : \"hasd154487\",\n  \"name\"      : \"user name\",\n  \"sex\"       : \"male\",\n  \"birthDate\" : \"04/07/1990\",\n  \"address\"   :   {\n    \"logradouro\"  : \"block 456\",\n    \"number\"      : 10,\n    \"complement\"  : \"house green\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n  }\n\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/user/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 19:45:46 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"create success\"}"
+						}
+					]
+				},
+				{
+					"name": "List users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						},
+						"description": "Shows a list with all system user."
+					},
+					"response": [
+						{
+							"name": "List users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/user/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:35:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "461"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"_id\":\"5cd9cc0abb700dd088d077b9\",\"email\":\"newEmail@email.com\",\"name\":\"user update\",\"sex\":\"male\",\"birthDate\":\"04/07/1990\",\"address\":{\"logradouro\":\"block 456\",\"number\":10,\"complement\":\"house green\",\"city\":\"Brasília\",\"state\":\"DF\"}},{\"_id\":\"5cd9d500bef0eac2a4efb1da\",\"email\":\"user2@email.com\",\"name\":\"user name 2\",\"sex\":\"female\",\"birthDate\":\"21/09/1995\",\"address\":{\"logradouro\":\"block 506\",\"number\":10,\"complement\":\"house blue\",\"city\":\"Brasília\",\"state\":\"DF\"}}]"
+						}
+					]
+				},
+				{
+					"name": "List user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/movie/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the user with that address\n"
+								}
+							]
+						},
+						"description": "Search for a user with this id\n"
+					},
+					"response": [
+						{
+							"name": "List user by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/user/?id=5cd9cbcabb700dd088d077b8",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9cbcabb700dd088d077b8"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:00:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"_id\":\"5cd9cbcabb700dd088d077b8\",\"email\":\"user@email.com\",\"name\":\"user name\",\"sex\":\"male\",\"birthDate\":\"04/07/1990\",\"address\":{\"logradouro\":\"block 456\",\"number\":10,\"complement\":\"house green\",\"city\":\"Brasília\",\"state\":\"DF\"}}"
+						}
+					]
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\"      : \"user update\",\n  \"sex\"       : \"male\",\n  \"birthDate\" : \"04/07/1990\",\n  \"address\"   :   {\n\n    \"logradouro\"  : \"block 456\",\n    \"number\"      : 10,\n    \"complement\"  : \"house green\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n  }\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the user with that address\n"
+								}
+							]
+						},
+						"description": "Update a user on the system"
+					},
+					"response": [
+						{
+							"name": "Update user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\"      : \"user update\",\n  \"sex\"       : \"male\",\n  \"birthDate\" : \"04/07/1990\",\n  \"address\"   :   {\n\n    \"logradouro\"  : \"block 456\",\n    \"number\"      : 10,\n    \"complement\"  : \"house green\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n  }\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/user/?id=5cd9cc0abb700dd088d077b9",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9cc0abb700dd088d077b9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:08:33 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\" update success\"}"
+						}
+					]
+				},
+				{
+					"name": "Update Pass and Email",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"newEmail@email.com\",\n\t\"pass\"\t: \"12345user\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/user/specific/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"specific",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the user with that address\n"
+								}
+							]
+						},
+						"description": "Update a user's password and email in the system"
+					},
+					"response": [
+						{
+							"name": "Update Pass and Email",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\" : \"newEmail@email.com\",\n\t\"pass\"\t: \"12345user\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/user/specific?id=5cd9cc0abb700dd088d077b9",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"specific"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9cc0abb700dd088d077b9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:14:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"update success\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the user with that address\n"
+								}
+							]
+						},
+						"description": "Remove a user on the system"
+					},
+					"response": [
+						{
+							"name": "Delete user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/user/?id=5cd9cbcabb700dd088d077b8",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9cbcabb700dd088d077b8"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:02:27 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{'message':'delete success'}"
+						}
+					]
+				}
+			],
+			"description": "This folder represents a collection of the user type in Doc Api - Cine.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e40e35d2-0f1f-4de4-b39e-3b0bc499879a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "956bff4a-ff46-4b4e-84f6-8fc1fafd0a22",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Create movie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\"           : \"Movie 1\",\n  \"classification\" : 12,\n  \"genre\"          : \"action\",\n  \"duration\"       : 116,\n  \"description\"    : \"Movie based on the real facts of the 1998\",\n  \"situation\"      : \"em cartaz\",\n  \"type\"           : \"dubbed\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/movie/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								""
+							]
+						},
+						"description": "Register a new movie on the system\n"
+					},
+					"response": [
+						{
+							"name": "Create movie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\"           : \"Movie 1\",\n  \"classification\" : 12,\n  \"genre\"          : \"action\",\n  \"duration\"       : 116,\n  \"description\"    : \"Movie based on the real facts of the 1998\",\n  \"situation\"      : \"em cartaz\",\n  \"type\"           : \"dubbed\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/movie/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movie",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:26:40 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"create success\"}"
+						}
+					]
+				},
+				{
+					"name": "List movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "Shows a list with all system movie.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "List movie by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/movie/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the movie with that address\n"
+								}
+							]
+						},
+						"description": "Search for a movie with this id\n"
+					},
+					"response": [
+						{
+							"name": "List movie by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/movie/?id=5cd9d300bef0eac2a4efb1d9",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movie",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9d300bef0eac2a4efb1d9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:36:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"_id\":\"5cd9d300bef0eac2a4efb1d9\",\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"dubbed\"}"
+						}
+					]
+				},
+				{
+					"name": "Update movie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\"           : \"Movie\",\n  \"classification\" : 10,\n  \"genre\"          : \"action\",\n  \"duration\"       : 116,\n  \"description\"    : \"Movie based on the real facts of the 1998\",\n  \"situation\"      : \"em breve\",\n  \"type\"           : \"subtitled\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/movie/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the movie with that address\n"
+								}
+							]
+						},
+						"description": "Update a movie on the system\n"
+					},
+					"response": [
+						{
+							"name": "Update movie",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\"           : \"Movie Update\",\n  \"classification\" : 10,\n  \"genre\"          : \"action\",\n  \"duration\"       : 116,\n  \"description\"    : \"Movie based on the real facts of the 1998\",\n  \"situation\"      : \"em breve\",\n  \"type\"           : \"subtitled\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/movie/?id=5cd9d300bef0eac2a4efb1d9",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movie",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9d300bef0eac2a4efb1d9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:40:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"update success\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/movie/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								":id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5cd9d300bef0eac2a4efb1d9",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the movie with that address\n"
+								}
+							]
+						},
+						"description": "Remove a movie on the system\n"
+					},
+					"response": [
+						{
+							"name": "Delete movie",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/movie/?id=5cd9d300bef0eac2a4efb1d9",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"movie",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9d300bef0eac2a4efb1d9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:42:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{'message':'delete success'}"
+						}
+					]
+				}
+			],
+			"description": "This folder represents a collection of the movie type in Doc Api - Cine."
+		},
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "Create room",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\":     3,\n  \"type\"  :     \"3D/XD\",\n  \"capacity\":   80\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/room/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								""
+							]
+						},
+						"description": "Register a new room on the system"
+					},
+					"response": [
+						{
+							"name": "Create room",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"number\":     3,\n  \"type\"  :     \"3D/XD\",\n  \"capacity\":   80\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/room/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"room",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:49:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"create success\"}"
+						}
+					]
+				},
+				{
+					"name": "List rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/room/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								""
+							]
+						},
+						"description": "Shows a list with all system room."
+					},
+					"response": [
+						{
+							"name": "List rooms",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/room/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"room",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:50:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "222"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"_id\":\"5cd9d805bef0eac2a4efb1dc\",\"number\":5,\"type\":\"3D\",\"capacity\":100},{\"_id\":\"5cd9d829bef0eac2a4efb1dd\",\"number\":1,\"type\":\"2D\",\"capacity\":150},{\"_id\":\"5cd9d83fbef0eac2a4efb1de\",\"number\":3,\"type\":\"3D/XD\",\"capacity\":80}]"
+						}
+					]
+				},
+				{
+					"name": "List room by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/room/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the room with that address\n"
+								}
+							]
+						},
+						"description": "Search for a room with this id"
+					},
+					"response": [
+						{
+							"name": "List room by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/room/?id=5cd9d805bef0eac2a4efb1dc",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"room",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9d805bef0eac2a4efb1dc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:51:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"_id\":\"5cd9d805bef0eac2a4efb1dc\",\"number\":5,\"type\":\"3D\",\"capacity\":100}"
+						}
+					]
+				},
+				{
+					"name": "Update room",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\":     5,\n  \"type\":       \"3D\",\n  \"capacity\":   200\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/room/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the movie with that address\n"
+								}
+							]
+						},
+						"description": "Update a room on the system"
+					},
+					"response": [
+						{
+							"name": "Update room",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"number\":     5,\n  \"type\":       \"3D\",\n  \"capacity\":   200\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/room/?id=5cd9d7a5bef0eac2a4efb1db",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"room",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9d7a5bef0eac2a4efb1db"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:55:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"update success\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete room",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/room/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the movie with that address\n"
+								}
+							]
+						},
+						"description": "Remove a room on the system"
+					},
+					"response": [
+						{
+							"name": "Delete room",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/room/?id=5cd9d805bef0eac2a4efb1dc",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"room",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9d805bef0eac2a4efb1dc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 20:56:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{'message':'delete success'}"
+						}
+					]
+				}
+			],
+			"description": "This folder represents a collection of the room type in Doc Api - Cine."
+		},
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "Create session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"movie\"  : {\n    \"name\"           : \"Movie 1\",\n    \"classification\" : 12,\n    \"genre\"          : \"action\",\n    \"duration\"       : 116,\n    \"description\"    : \"Movie based on the real facts of the 1998\",\n    \"situation\"      : \"em cartaz\",\n    \"type\"           : \"dubbed\"\n  },\n  \"room\"  :   {\n    \"number\":     5,\n    \"type\":       \"3D\",\n    \"capacity\":   100\n  },\n  \"date\"  :   \"16/06/2019\",\n  \"duration\"  : 1322\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/session/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"session",
+								""
+							]
+						},
+						"description": "Register a new session on the system"
+					},
+					"response": [
+						{
+							"name": "Create session",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"movie\"  : {\n    \"name\"           : \"Movie 1\",\n    \"classification\" : 12,\n    \"genre\"          : \"action\",\n    \"duration\"       : 116,\n    \"description\"    : \"Movie based on the real facts of the 1998\",\n    \"situation\"      : \"em cartaz\",\n    \"type\"           : \"dubbed\"\n  },\n  \"room\"  :   {\n    \"number\":     5,\n    \"type\":       \"3D\",\n    \"capacity\":   100\n  },\n  \"date\"  :   \"16/06/2019\",\n  \"duration\"  : 1322\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/session/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"session",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:00:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"create success\"}"
+						}
+					]
+				},
+				{
+					"name": "List sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/session/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"session",
+								""
+							]
+						},
+						"description": "Shows a list with all system session."
+					},
+					"response": [
+						{
+							"name": "List sessions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/session/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"session",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:01:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "873"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"_id\":\"5cd8a3cad919016e64a621cd\",\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2020\",\"duration\":555},{\"_id\":\"5cd8a3e0d919016e64a621ce\",\"movie\":{\"name\":\"Movie 2\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322},{\"_id\":\"5cd9daf6bef0eac2a4efb1df\",\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"dubbed\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322}]"
+						}
+					]
+				},
+				{
+					"name": "List session by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/session/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"session",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the session with that address"
+								}
+							]
+						},
+						"description": "Search for a session with this id"
+					},
+					"response": [
+						{
+							"name": "List session by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/session/?id=5cd8a3cad919016e64a621cd",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"session",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd8a3cad919016e64a621cd"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:03:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "287"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"_id\":\"5cd8a3cad919016e64a621cd\",\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2020\",\"duration\":555}"
+						}
+					]
+				},
+				{
+					"name": "Update session",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\"  :   \"20/06/2019\",\n  \"duration\"  : 1222\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/session/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"session",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the session with that address"
+								}
+							]
+						},
+						"description": "Update a session on the system"
+					},
+					"response": [
+						{
+							"name": "Update session",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"date\"  :   \"20/06/2019\",\n  \"duration\"  : 1222\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/session/?id=5cd8a3e0d919016e64a621ce",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"session",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd8a3e0d919016e64a621ce"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:46:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"update success\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete session",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/session/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"session",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the session with that address"
+								}
+							]
+						},
+						"description": "Remove a session on the system"
+					},
+					"response": [
+						{
+							"name": "Delete session",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/session/?id=5cd9daf6bef0eac2a4efb1df",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"session",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9daf6bef0eac2a4efb1df"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:08:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{'message':'delete success'}"
+						}
+					]
+				}
+			],
+			"description": "This folder represents a collection of the session type in Doc Api - Cine."
+		},
+		{
+			"name": "Cine",
+			"item": [
+				{
+					"name": "Create cine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\"  :   \"New Cine\",\n  \"address\"   :   {\n\n    \"logradouro\"  : \"quadra 501\",\n    \"number\"      : 22,\n    \"complement\"  : \"lote 13\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n\n  },\n  \"sessions\" : [{\n    \"movie\"  : {\n      \"name\"           : \"Movie 1\",\n      \"classification\" : 12,\n      \"genre\"          : \"action\",\n      \"duration\"       : 116,\n      \"description\"    : \"Movie based on the real facts of the 1998\",\n      \"situation\"      : \"em cartaz\",\n      \"type\"           : \"dubbed\"\n    },\n    \"room\"  :   {\n      \"number\":     5,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    \"date\"  :   \"16/06/2019\",\n    \"duration\"  : 1322\n  }],\n  \"rooms\"  : [{\n      \"number\":     1,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    {\n      \"number\":     2,\n      \"type\":       \"2D\",\n      \"capacity\":   80\n    },\n    {\n      \"number\":     3,\n      \"type\":       \"3D/XD\",\n      \"capacity\":   150\n    }],\n  \"movies\"  :[{\n    \"name\"           : \"Movie 1\",\n    \"classification\" : 12,\n    \"genre\"          : \"action\",\n    \"duration\"       : 116,\n    \"description\"    : \"Movie based on the real facts of the 1998\",\n    \"situation\"      : \"em cartaz\"\n    },\n    {\n      \"name\"           : \"Movie 2\",\n      \"classification\" : 10,\n      \"genre\"          : \"adventure\",\n      \"duration\"       : 150,\n      \"description\"    : \"Movie oscar\",\n      \"situation\"      : \"em breve\",\n      \"type\"           : \"subtitled\"\n    }]\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/cine/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cine",
+								""
+							]
+						},
+						"description": "Register a new cine on the system"
+					},
+					"response": [
+						{
+							"name": "Create cine",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\"  :   \"New Cine\",\n  \"address\"   :   {\n\n    \"logradouro\"  : \"quadra 501\",\n    \"number\"      : 22,\n    \"complement\"  : \"lote 13\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n\n  },\n  \"sessions\" : [{\n    \"movie\"  : {\n      \"name\"           : \"Movie 1\",\n      \"classification\" : 12,\n      \"genre\"          : \"action\",\n      \"duration\"       : 116,\n      \"description\"    : \"Movie based on the real facts of the 1998\",\n      \"situation\"      : \"em cartaz\",\n      \"type\"           : \"dubbed\"\n    },\n    \"room\"  :   {\n      \"number\":     5,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    \"date\"  :   \"16/06/2019\",\n    \"duration\"  : 1322\n  }],\n  \"rooms\"  : [{\n      \"number\":     1,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    {\n      \"number\":     2,\n      \"type\":       \"2D\",\n      \"capacity\":   80\n    },\n    {\n      \"number\":     3,\n      \"type\":       \"3D/XD\",\n      \"capacity\":   150\n    }],\n  \"movies\"  :[{\n    \"name\"           : \"Movie 1\",\n    \"classification\" : 12,\n    \"genre\"          : \"action\",\n    \"duration\"       : 116,\n    \"description\"    : \"Movie based on the real facts of the 1998\",\n    \"situation\"      : \"em cartaz\"\n    },\n    {\n      \"name\"           : \"Movie 2\",\n      \"classification\" : 10,\n      \"genre\"          : \"adventure\",\n      \"duration\"       : 150,\n      \"description\"    : \"Movie oscar\",\n      \"situation\"      : \"em breve\",\n      \"type\"           : \"subtitled\"\n    }]\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/cine/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cine",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:19:18 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"create success\"}"
+						}
+					]
+				},
+				{
+					"name": "List cines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/cine/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cine",
+								""
+							]
+						},
+						"description": "Shows a list with all system cine."
+					},
+					"response": [
+						{
+							"name": "List cines",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/cine/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cine",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:20:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1769"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"_id\":\"5cd9ded7bef0eac2a4efb1e0\",\"name\":\"CineFanatic\",\"address\":{\"logradouro\":\"quadra 456\",\"number\":10,\"complement\":\"casa 7\",\"city\":\"Brasília\",\"state\":\"DF\"},\"rooms\":[{\"number\":1,\"type\":\"3D\",\"capacity\":100},{\"number\":2,\"type\":\"2D\",\"capacity\":80},{\"number\":3,\"type\":\"3D/XD\",\"capacity\":150}],\"sessions\":[{\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"dubbed\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322}],\"movies\":[{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},{\"name\":\"Movie 2\",\"genre\":\"adventure\",\"classification\":10,\"duration\":150,\"description\":\"Movie oscar\",\"situation\":\"em breve\",\"type\":\"subtitled\"}]},{\"_id\":\"5cd9df5612eb81758de41ba1\",\"name\":\"New Cine\",\"address\":{\"logradouro\":\"quadra 501\",\"number\":22,\"complement\":\"lote 13\",\"city\":\"Brasília\",\"state\":\"DF\"},\"rooms\":[{\"number\":1,\"type\":\"3D\",\"capacity\":100},{\"number\":2,\"type\":\"2D\",\"capacity\":80},{\"number\":3,\"type\":\"3D/XD\",\"capacity\":150}],\"sessions\":[{\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"dubbed\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322}],\"movies\":[{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},{\"name\":\"Movie 2\",\"genre\":\"adventure\",\"classification\":10,\"duration\":150,\"description\":\"Movie oscar\",\"situation\":\"em breve\",\"type\":\"subtitled\"}]}]"
+						}
+					]
+				},
+				{
+					"name": "List cine by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/cine/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cine",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the cine with that address"
+								}
+							]
+						},
+						"description": "Search for a cine with this id"
+					},
+					"response": [
+						{
+							"name": "List cine by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/cine/?id=5cd9ded7bef0eac2a4efb1e0",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cine",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9ded7bef0eac2a4efb1e0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:21:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "884"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"_id\":\"5cd9ded7bef0eac2a4efb1e0\",\"name\":\"CineFanatic\",\"address\":{\"logradouro\":\"quadra 456\",\"number\":10,\"complement\":\"casa 7\",\"city\":\"Brasília\",\"state\":\"DF\"},\"rooms\":[{\"number\":1,\"type\":\"3D\",\"capacity\":100},{\"number\":2,\"type\":\"2D\",\"capacity\":80},{\"number\":3,\"type\":\"3D/XD\",\"capacity\":150}],\"sessions\":[{\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"dubbed\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322}],\"movies\":[{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},{\"name\":\"Movie 2\",\"genre\":\"adventure\",\"classification\":10,\"duration\":150,\"description\":\"Movie oscar\",\"situation\":\"em breve\",\"type\":\"subtitled\"}]}"
+						}
+					]
+				},
+				{
+					"name": "Update cine",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\"  :   \"CineFantastic\",\n  \"address\"   :   {\n\n    \"logradouro\"  : \"quadra 456\",\n    \"number\"      : 10,\n    \"complement\"  : \"lote 7\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n\n  },\n  \"sessions\" : [{\n    \"movie\"  : {\n      \"name\"           : \"Movie 1\",\n      \"classification\" : 12,\n      \"genre\"          : \"action\",\n      \"duration\"       : 116,\n      \"description\"    : \"Movie based on the real facts of the 1998\",\n      \"situation\"      : \"em cartaz\",\n      \"type\"           : \"dubbed\"\n    },\n    \"room\"  :   {\n      \"number\":     5,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    \"date\"  :   \"16/06/2019\",\n    \"duration\"  : 1322\n  }],\n  \"rooms\"  : [{\n      \"number\":     1,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    {\n      \"number\":     2,\n      \"type\":       \"2D\",\n      \"capacity\":   80\n    },\n    {\n      \"number\":     3,\n      \"type\":       \"3D/XD\",\n      \"capacity\":   150\n    }],\n  \"movies\"  :[{\n    \"name\"           : \"Movie 1\",\n    \"classification\" : 12,\n    \"genre\"          : \"action\",\n    \"duration\"       : 116,\n    \"description\"    : \"Movie based on the real facts of the 1998\",\n    \"situation\"      : \"em cartaz\",\n    \"type\"           : \"dubbed\"\n    },\n    {\n      \"name\"           : \"Movie 2\",\n      \"classification\" : 10,\n      \"genre\"          : \"adventure\",\n      \"duration\"       : 150,\n      \"description\"    : \"Movie oscar\",\n      \"situation\"      : \"em breve\",\n      \"type\"           : \"subtitled\"\n    },\n    {\n      \"name\"           : \"Movie 3\",\n      \"classification\" : 16,\n      \"genre\"          : \"war\",\n      \"duration\"       : 160,\n      \"description\"    : \"Movie oscar\",\n      \"situation\"      : \"em breve\",\n      \"type\"           : \"subtitled\"\n    }]\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/cine/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cine",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the cine with that address"
+								}
+							]
+						},
+						"description": "Update a cine on the system"
+					},
+					"response": [
+						{
+							"name": "Update cine",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\"  :   \"CineFantastic\",\n  \"address\"   :   {\n\n    \"logradouro\"  : \"quadra 456\",\n    \"number\"      : 10,\n    \"complement\"  : \"lote 7\",\n    \"city\"        : \"Brasília\",\n    \"state\"       : \"DF\"\n\n  },\n  \"sessions\" : [{\n    \"movie\"  : {\n      \"name\"           : \"Movie 1\",\n      \"classification\" : 12,\n      \"genre\"          : \"action\",\n      \"duration\"       : 116,\n      \"description\"    : \"Movie based on the real facts of the 1998\",\n      \"situation\"      : \"em cartaz\",\n      \"type\"           : \"dubbed\"\n    },\n    \"room\"  :   {\n      \"number\":     5,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    \"date\"  :   \"16/06/2019\",\n    \"duration\"  : 1322\n  }],\n  \"rooms\"  : [{\n      \"number\":     1,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    {\n      \"number\":     2,\n      \"type\":       \"2D\",\n      \"capacity\":   80\n    },\n    {\n      \"number\":     3,\n      \"type\":       \"3D/XD\",\n      \"capacity\":   150\n    }],\n  \"movies\"  :[{\n    \"name\"           : \"Movie 1\",\n    \"classification\" : 12,\n    \"genre\"          : \"action\",\n    \"duration\"       : 116,\n    \"description\"    : \"Movie based on the real facts of the 1998\",\n    \"situation\"      : \"em cartaz\",\n    \"type\"           : \"dubbed\"\n    },\n    {\n      \"name\"           : \"Movie 2\",\n      \"classification\" : 10,\n      \"genre\"          : \"adventure\",\n      \"duration\"       : 150,\n      \"description\"    : \"Movie oscar\",\n      \"situation\"      : \"em breve\",\n      \"type\"           : \"subtitled\"\n    },\n    {\n      \"name\"           : \"Movie 3\",\n      \"classification\" : 16,\n      \"genre\"          : \"war\",\n      \"duration\"       : 160,\n      \"description\"    : \"Movie oscar\",\n      \"situation\"      : \"em breve\",\n      \"type\"           : \"subtitled\"\n    }]\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/cine/?id=5cd9ded7bef0eac2a4efb1e0",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cine",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9ded7bef0eac2a4efb1e0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:25:46 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"update success\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete cine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/cine/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cine",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the movie with that address"
+								}
+							]
+						},
+						"description": "Remove a cine on the system"
+					},
+					"response": [
+						{
+							"name": "Delete cine",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/cine/?id=5cd9ded7bef0eac2a4efb1e0",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cine",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9ded7bef0eac2a4efb1e0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:27:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{'message':'delete success'}"
+						}
+					]
+				}
+			],
+			"description": "This folder represents a collection of the cine type in Doc Api - Cine."
+		},
+		{
+			"name": "Reservation",
+			"item": [
+				{
+					"name": "Create reservation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"seat\" : \"17F\",\n\n  \"User\" : {\n    \"email\"     : \"user@mail.com\",\n    \"name\"      : \"usuario\",\n    \"birthDate\" : \"04/04/1956\"\n          },\n\n  \"Cine\": {\n    \"name\"  :   \"CineFanatic\",\n    \"address\"   :   {\n\n      \"logradouro\" : \"quadra 556\",\n      \"number\"     : 10,\n      \"complement\" : \"lote 7\",\n      \"city\"       : \"Brasília\",\n      \"state\"      : \"DF\"\n    }\n  },\n\n  \"Session\": {\n    \"movie\"  : {\n      \"name\"           : \"Movie 1\",\n      \"classification\" : 12,\n      \"genre\"          : \"action\",\n      \"duration\"       : 116,\n      \"description\"    : \"Movie based on the real facts of the 1998\",\n      \"situation\"      : \"em cartaz\",\n      \"type\"           : \"dubbed\"\n    },\n    \"room\"  :   {\n      \"number\":     5,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    \"date\"  :   \"16/06/2019\",\n    \"duration\"  : 1322\n  },\n\n  \"Payment\" : {\n    \"name\"   : \"ticket purchase\",\n    \"type\"   : \"card\",\n    \"amount\" : 20.50,\n    \"valid\"  : \"10/05/2019\"\n  }\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/reservation/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservation",
+								""
+							]
+						},
+						"description": "Register a new reservation on the system"
+					},
+					"response": [
+						{
+							"name": "Create reservation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"seat\" : \"17F\",\n\n  \"User\" : {\n    \"email\"     : \"user@mail.com\",\n    \"name\"      : \"usuario\",\n    \"birthDate\" : \"04/04/1956\"\n          },\n\n  \"Cine\": {\n    \"name\"  :   \"CineFanatic\",\n    \"address\"   :   {\n\n      \"logradouro\" : \"quadra 556\",\n      \"number\"     : 10,\n      \"complement\" : \"lote 7\",\n      \"city\"       : \"Brasília\",\n      \"state\"      : \"DF\"\n    }\n  },\n\n  \"Session\": {\n    \"movie\"  : {\n      \"name\"           : \"Movie 1\",\n      \"classification\" : 12,\n      \"genre\"          : \"action\",\n      \"duration\"       : 116,\n      \"description\"    : \"Movie based on the real facts of the 1998\",\n      \"situation\"      : \"em cartaz\",\n      \"type\"           : \"dubbed\"\n    },\n    \"room\"  :   {\n      \"number\":     5,\n      \"type\":       \"3D\",\n      \"capacity\":   100\n    },\n    \"date\"  :   \"16/06/2019\",\n    \"duration\"  : 1322\n  },\n\n  \"Payment\" : {\n    \"name\"   : \"ticket purchase\",\n    \"type\"   : \"card\",\n    \"amount\" : 20.50,\n    \"valid\"  : \"10/05/2019\"\n  }\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/reservation/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"reservation",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:49:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"create success\"}"
+						}
+					]
+				},
+				{
+					"name": "List reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/reservation/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservation",
+								""
+							]
+						},
+						"description": "Shows a list with all system reservation."
+					},
+					"response": [
+						{
+							"name": "List reservation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/reservation/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"reservation",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:32:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1190"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"_id\":\"5cd8dd9596a78e48aeacedf7\",\"user\":{\"email\":\"user@mail.com\",\"name\":\"usuario\",\"birthDate\":\"04/04/1956\"},\"cine\":{\"name\":\"CineFanatic\",\"address\":{\"logradouro\":\"quadra 556\",\"number\":10,\"complement\":\"-\",\"city\":\"Brasília\",\"state\":\"DF\"}},\"session\":{\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322},\"payment\":{\"name\":\"ticket purchase\",\"type\":\"card\",\"value\":0,\"date\":\"\"},\"seat\":\"17F\"},{\"_id\":\"5cd9e25212eb81758de41ba2\",\"user\":{\"email\":\"user@mail.com\",\"name\":\"usuario\",\"birthDate\":\"04/04/1956\"},\"cine\":{\"name\":\"CineFanatic\",\"address\":{\"logradouro\":\"quadra 556\",\"number\":10,\"complement\":\"lote 7\",\"city\":\"Brasília\",\"state\":\"DF\"}},\"session\":{\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"dubbed\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322},\"payment\":{\"name\":\"ticket purchase\",\"type\":\"card\",\"value\":0,\"date\":\"\"},\"seat\":\"17F\"}]"
+						}
+					]
+				},
+				{
+					"name": "List reservation by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/reservation/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservation",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the reservation with that address"
+								}
+							]
+						},
+						"description": "Search for a reservation with this id"
+					},
+					"response": [
+						{
+							"name": "List reservation by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/reservation/?id=5cd8dd9596a78e48aeacedf7",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"reservation",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd8dd9596a78e48aeacedf7"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:34:34 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "588"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"_id\":\"5cd8dd9596a78e48aeacedf7\",\"user\":{\"email\":\"user@mail.com\",\"name\":\"usuario\",\"birthDate\":\"04/04/1956\"},\"cine\":{\"name\":\"CineFanatic\",\"address\":{\"logradouro\":\"quadra 556\",\"number\":10,\"complement\":\"-\",\"city\":\"Brasília\",\"state\":\"DF\"}},\"session\":{\"movie\":{\"name\":\"Movie 1\",\"genre\":\"action\",\"classification\":12,\"duration\":116,\"description\":\"Movie based on the real facts of the 1998\",\"situation\":\"em cartaz\",\"type\":\"\"},\"room\":{\"number\":5,\"type\":\"3D\",\"capacity\":100},\"date\":\"16/06/2019\",\"duration\":1322},\"payment\":{\"name\":\"ticket purchase\",\"type\":\"card\",\"value\":0,\"date\":\"\"},\"seat\":\"17F\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete reservation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/reservation/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservation",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "identify the reservation with that address"
+								}
+							]
+						},
+						"description": "Remove a reservation on the system"
+					},
+					"response": [
+						{
+							"name": "Delete reservation",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/reservation/?id=5cd9e25212eb81758de41ba2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"reservation",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5cd9e25212eb81758de41ba2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2019 21:44:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{'message':'delete success'}"
+						}
+					]
+				}
+			],
+			"description": "This folder represents a collection of the reservation type in Doc Api - Cine."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f9e4f440-f772-4fa4-add1-966850738710",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0ac4ae5d-8a89-4013-83ac-91a2753feb7d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

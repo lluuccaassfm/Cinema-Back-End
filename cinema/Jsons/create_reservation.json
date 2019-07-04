@@ -1,0 +1,49 @@
+{
+  "seat" : "17F",
+
+  "User" : {
+    "email"     : "user@mail.com",
+    "name"      : "usuario",
+    "birthDate" : "04/04/1956"
+
+          },
+
+  "Cine": {
+    "name"  :   "CineFanatic",
+    "address"   :   {
+
+      "logradouro" : "quadra 556",
+      "number"     : 10,
+      "complement" : "-",
+      "city"       : "Brasília",
+      "state"      : "DF"
+
+    }
+  },
+
+  "Session": {
+    "movie"  : {
+      "name"           : "Movie 1",
+      "classification" : 12,
+      "genre"          : "action",
+      "duration"       : 116,
+      "description"    : "Movie based on the real facts of the 1998",
+      "situation"      : "em cartaz",
+      "type"           : "dubbed"
+    },
+    "room"  :   {
+      "number":     5,
+      "type":       "3D",
+      "capacity":   100
+    },
+    "date"  :   "16/06/2019",
+    "duration"  : 1322
+  },
+
+  "Payment" : {
+    "name"   : "ticket purchase",
+    "type"   : "card",
+    "amount" : 20.50,
+    "valid"  : "10/05/2019"
+  }
+}

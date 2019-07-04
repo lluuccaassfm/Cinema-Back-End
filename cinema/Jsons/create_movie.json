@@ -1,0 +1,9 @@
+{
+  "name"           : "Movie 1",
+  "classification" : 12,
+  "genre"          : "action",
+  "duration"       : 116,
+  "description"    : "Movie based on the real facts of the 1998",
+  "situation"      : "em cartaz",
+  "type"           : "dubbed"
+}
